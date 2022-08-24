@@ -1,0 +1,17 @@
+.myinput{
+    background: none;
+    padding: 8px;
+    font-size: 16px;
+    border: 2px rgba(255, 255, 255, 0.1) solid;
+    border-radius: 30px;
+    transition:500ms;
+    width: 50%;
+    text-align: center;
+}
+.myinput:hover{
+    background: rgba(255, 255, 255, 0.188);
+}
+.myinput:focus{
+    background: rgba(241, 241, 241, 0.6);
+    padding:15px;
+}

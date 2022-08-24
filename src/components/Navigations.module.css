@@ -1,0 +1,24 @@
+*{
+    text-decoration: none;
+    color:black
+}
+.nav{
+    position: fixed;
+    z-index: 50;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    height: fit-content;
+    background: linear-gradient(to right, #481173 0, #cb11ab 100%) no-repeat ;
+    padding: 10px 3%;
+    text-decoration: none;
+}
+
+.homelink{
+    text-decoration: none;
+}
+

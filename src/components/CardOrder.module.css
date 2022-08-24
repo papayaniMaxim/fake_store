@@ -1,0 +1,58 @@
+.cardorder{
+    border-radius: 20px;
+    width: 30%;
+    height: 200px;
+    margin: 10px 20px;
+    margin-top: 80px;
+    padding: 20px;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.totalprice{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: "Fjalla One", sans-serif;
+    font-size: 30px;
+    line-height: 100%;
+
+}
+.productscout{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+h5{
+    color:gray
+}
+.button{
+    cursor: pointer;
+    border: 1px solid #cb11ab;
+    padding: 14px 30px;
+    border-radius: 200px;
+    color: #fff;
+    background: #cb11ab;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    transition:200ms;
+}
+
+.button:hover{
+    background: #fff;
+    color: #115dd8;
+}
+
+@media (max-width:768px){
+    .cardorder{
+        border-radius: 20px;
+        width: 90%;
+        margin: 10px 20px;
+        padding: 20px;
+        border: 1px solid #cb11ac0d ;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}

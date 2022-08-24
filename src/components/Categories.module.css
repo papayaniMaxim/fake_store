@@ -1,0 +1,10 @@
+.categorybuttons{
+    display: flex;
+    flex-direction: column;
+    border-right: 1px rgb(175, 175, 175) solid;
+}
+.sortContainer{
+    font-family: "Open Sans", sans-serif;;
+    padding-top: 20px;
+    text-align: center;
+}

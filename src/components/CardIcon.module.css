@@ -1,0 +1,22 @@
+.iconContainer{
+    position: relative;
+}
+
+.card_icon{
+    height: 35px;
+}
+
+.count{
+    position: absolute;
+    left: 14px;
+    top: 0;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background: orange;
+    border: 1px orange solid; 
+    border-radius: 50%;
+    text-align: center;
+    justify-content: center;
+    font-size: 12px;
+}
