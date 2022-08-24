@@ -1,4 +1,4 @@
-import { Product, State } from "../interface/interfaces";
+import { State } from "../interface/interfaces";
 import { ADD_FETCH_PRODUCTS, ADD_TO_CARD, CATEGORY_WAS_CHANGE, DELETE_FROM_CARD, END_FETCHING, PRODUCT_FETCHING_ERROR, SEARCH_WAS_CHANGE, SORT_WAS_CHANGE, START_FETCHING } from "./actions";
 
 const initialState = {
@@ -35,7 +35,7 @@ export const reducer = (state:State = initialState , action: any) => {
         case CATEGORY_WAS_CHANGE:
             let selectedCategories = [...state.selectedCategories]
             if (selectedCategories.includes(action.category)) {
-                selectedCategories = selectedCategories.filter(category => category != action.category)
+                selectedCategories = selectedCategories.filter(category => category !== action.category)
             } else {
                 selectedCategories.push(action.category)
             }
@@ -47,7 +47,7 @@ export const reducer = (state:State = initialState , action: any) => {
             return { ...state, card: [...state.card, product] }
         
         case DELETE_FROM_CARD:
-            return { ...state, card: [...state.card].filter(product => product.id != action.id)}
+            return { ...state, card: [...state.card].filter(product => product.id !== action.id)}
         
         default: return state
     }

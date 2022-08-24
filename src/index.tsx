@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import { Provider } from 'react-redux';
 import { reducer } from './redux/reducers';
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 import { configureStore } from '@reduxjs/toolkit';
 
 const store = configureStore({
@@ -16,8 +16,8 @@ const root = ReactDOM.createRoot(
 );
 root.render( 
     <Provider store = {store}>
-        <BrowserRouter>
+        <HashRouter>
             <App /> 
-        </BrowserRouter>        
+        </HashRouter>        
     </Provider>
 );
