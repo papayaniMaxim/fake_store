@@ -17,7 +17,6 @@ export default function MyButton2(props: {
             setIsActive(() => false)
         }
     }, [selectedCategories])
-
     return (
         <button
             onClick={() => {
