@@ -18,7 +18,7 @@ export default function Categories() {
     }, [categories])
 
     return (
-        <div className={classes.categorybuttons}>
+        <div onClick={event => event.stopPropagation()} className={classes.categorybuttons}>
             {categoryButtons}
             <div className={classes.sortContainer}>
             Sort by: <Sorting />

@@ -1,8 +1,20 @@
 .categorybuttons{
+    width: 50%;
+    height: 100%;
+    min-width: fit-content; 
     display: flex;
     flex-direction: column;
-    border-right: 1px rgb(175, 175, 175) solid;
+    padding-top: 93px;
+    padding-left: 15%;
+    background: rgba(255, 255, 255, 0.97);
 }
+
+@media (min-width: 1150px){
+    .categorybuttons{
+        padding-left: 8%;
+    } 
+}
+
 .sortContainer{
     font-family: "Open Sans", sans-serif;;
     padding-top: 20px;
