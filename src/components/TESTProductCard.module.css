@@ -82,8 +82,8 @@
         font-size: 14px;
         color: rgb(79, 21, 86);
         overflow-wrap: break-word;
-        
     }
+    
     .bottom{
         display: flex;
         flex-direction: row;
@@ -226,5 +226,18 @@
     .button:active{
         background: #009016;
         border: 1px solid #009016;
+    }
+}
+.description{
+    animation-name: description_animation;
+    animation-duration: 700ms;  
+}
+@keyframes description_animation{
+    0%{
+        opacity: 0;
+        height: auto;
+    }
+    100%{
+        opacity: 0.9;
     }
 }

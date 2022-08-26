@@ -1,5 +1,31 @@
 .logo{
+    position: relative;
     font-size: large;
     font-weight: 700;
-    color: aliceblue;
+    color:rgb(255, 255, 255);
+    animation-name: logo_neon;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+}
+
+@keyframes logo_neon {
+    0%{       
+        text-shadow:
+        0 0 7px rgb(157, 0, 255),
+        0 0 10px rgb(157, 0, 255),
+        0 0 21px rgb(132, 0, 255),
+        0 0 42px rgb(251, 0, 255),
+        0 0 82px rgb(251, 0, 255);
+
+    }
+    100%{
+        text-shadow:
+        0 0 7px rgb(25, 0, 255),
+        0 0 10px rgb(25, 0, 255),
+        0 0 21px rgb(25, 0, 255),
+        0 0 42px rgb(0, 234, 255),
+        0 0 82px rgb(0, 234, 255);
+    }
 }
