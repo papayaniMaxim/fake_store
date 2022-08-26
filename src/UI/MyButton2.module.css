@@ -1,5 +1,6 @@
 
 .passive{
+    display: block;
     background: none ; 
     padding: 5px 40px;
     color: rgb(73, 73, 73);
@@ -7,6 +8,10 @@
     font-size: 18px;
     cursor: pointer;
     border: white;
+    overflow: hidden;
+    overflow-wrap: normal;
+    word-wrap: normal;
+    white-space: nowrap;
 }
 .passive:hover{
     color:black;
@@ -14,6 +19,7 @@
 }
 
 .active{
+    display: block;
     padding: 5px 40px;
     font-family: "Open Sans", sans-serif;
     font-size: 18px;
@@ -21,4 +27,8 @@
     color: white;
     background: black;
     border: white;
+    overflow: hidden;
+    overflow-wrap: normal;
+    word-wrap: normal;
+    white-space: nowrap;
 }
