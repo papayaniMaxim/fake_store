@@ -1,11 +1,11 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { State } from '../interface/interfaces';
 import { cleanCardAction, fullfilledSendingOrderAction, pendingSendingOrderAction, rejectedSendingOrderAction, startSendingOrderAction } from '../redux/actions';
 import sendOrder from '../services/sendOrder';
 import MySpinner from '../UI/MySpinner';
 import classes from './BuyModal.module.css'
-function BuyModal(props: { setOpen:() => void }) {
+function BuyModal(props: { setOpen:() => void, open:boolean }) {
     
     const [userName, setUserName] = useState<string>()
     const [userPhone, setUserPhone] = useState<number | string>() 
@@ -16,7 +16,7 @@ function BuyModal(props: { setOpen:() => void }) {
     const sendingOrderStatus = useSelector((state:State)=> state.sendingOrderStatus)
     
     const dispatch = useDispatch()
-
+    
     const handler = () => {
         dispatch(startSendingOrderAction)
         sendOrder(userName, userPhone, card)
@@ -24,8 +24,8 @@ function BuyModal(props: { setOpen:() => void }) {
                 dispatch(fullfilledSendingOrderAction)
                 dispatch(cleanCardAction)
                 setTimeout(() => {
-                    setOpen()
                     dispatch(pendingSendingOrderAction)
+                    setOpen()
                 }, 4000)
             }, error => {
                 setTimeout(() => {console.log('rejected'); handler()}, 2000)

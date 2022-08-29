@@ -6,7 +6,7 @@ export default function sendOrder(userName: string|undefined, userPhone: number|
     const chatId = '-628803140'
 
     const products = card.map(product => [product.title, product.price].join(' $')+ '\n').join('') 
-    console.log(products)
+
     let fields = [
         '<b>Name</b>: ' + userName,
         '<b>Phone</b>: ' + userPhone,

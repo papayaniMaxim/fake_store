@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { useSelector } from "react-redux"
 import { Product, State } from "../interface/interfaces"
 import BuyModal from "./BuyModal"
@@ -8,7 +8,7 @@ export default function CardOrder() {
     const [open, setOpen] = useState(false)
     const totalPrice = useSelector((state: State) => state.card.reduce((acc: number, product: Product) => acc + product.price, 0))
     const productsCount = useSelector((state: State) => state.card.length)
-    
+    useEffect(()=> console.log(open), [open])
     return (
         <div className={classes.cardorder}>
             <div className={classes.totalprice}>
@@ -24,7 +24,7 @@ export default function CardOrder() {
                 className={classes.button}>buy
             </button>
 
-            {open ? <BuyModal setOpen = {()=>setOpen(prev=>!prev)} /> : null}
+            {open ? <BuyModal open={open} setOpen = {()=>setOpen(prev=>false)} /> : null}
             
         </div>
     )
