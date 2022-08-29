@@ -8,7 +8,7 @@ export default function CardOrder() {
     const [open, setOpen] = useState(false)
     const totalPrice = useSelector((state: State) => state.card.reduce((acc: number, product: Product) => acc + product.price, 0))
     const productsCount = useSelector((state: State) => state.card.length)
-    useEffect(()=> console.log(open), [open])
+    
     return (
         <div className={classes.cardorder}>
             <div className={classes.totalprice}>
