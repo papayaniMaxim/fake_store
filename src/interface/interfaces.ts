@@ -18,5 +18,6 @@ export interface State {
     sort: string,
     selectedCategories: string[],
     card: Product[],
-    productFetchError:{error:boolean, massage:string}
+    productFetchError: { error: boolean, massage: string }
+    sendingOrderStatus: string,
 }

@@ -14,11 +14,11 @@
     bottom: 0;
     background: rgba(255, 255, 255, 0.281);
     animation-name: burger;
-    animation-duration: 500ms;
+    animation-duration: 700ms;
 }
 @keyframes burger{
     0%{
-        right: 60%;
+        right: 100%;
     }
     100%{
         right: 0;

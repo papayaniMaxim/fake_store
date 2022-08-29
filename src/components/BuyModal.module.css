@@ -31,6 +31,7 @@
 }
 .input{
     padding: 14px 30px;
+    font-size: 16px;
     border: 1px solid rgba(229, 0, 254, 0.1);
     border-radius: 20px;
     margin: 5px;
@@ -39,6 +40,7 @@
 }
 input:focus{
     padding: 16px 33px;
+    font-size: 18px;
     box-shadow: 
     0 0 7px rgba(157, 0, 255, 0.05),
     0 0 10px rgba(157, 0, 255, 0.05),
@@ -63,4 +65,18 @@ input:focus{
 .button:hover{
     background: #fff;
     color: #115dd8;
+}
+.fullfilled{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+}
+.message{
+    padding: 30px;
+    opacity: 0.6;
+    text-align: center;
+    font-size: 30px;
+    font-family: "Open Sans", sans-serif;
 }

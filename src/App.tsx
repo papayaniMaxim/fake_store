@@ -3,10 +3,13 @@ import Card from "./pages/Card";
 import HomePage from "./pages/HomePage";
 import Navigations from "./components/Navigations";
 import useFetchProducts from "./hooks/useFetchProducts";
+import { useEffect } from "react";
+import getVisitorInfo from "./services/getVisitorInfo";
 
 function App() {
     
     useFetchProducts()
+    useEffect(() => getVisitorInfo(), [])
     
     return (
         <>
