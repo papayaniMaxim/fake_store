@@ -9,7 +9,7 @@ import getVisitorInfo from "./services/getVisitorInfo";
 function App() {
     
     useFetchProducts()
-    useEffect(() => getVisitorInfo(), [])
+    // useEffect(() => getVisitorInfo(), [])
     
     return (
         <>

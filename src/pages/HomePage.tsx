@@ -1,15 +1,17 @@
 import classes from './HomePage.module.css'
 import ProductList from '../components/ProductList';
-import Search from '../components/Search';
-import Sorting from '../components/Sorting';
-import Categories from '../components/Categories';
 import BurgerMenu from '../components/BurgerMenu';
+import { useState } from 'react';
+import Portal from '../components/Portal';
 function HomePage() {
-    
+    const [open, setOpen] = useState(false)
+
+
     return (
-        <div className={classes.container}>
+        <div onClick={ ()=> setOpen(prev=>!prev) } className={classes.container}>
             <BurgerMenu/>
             <ProductList />
+
         </div>
     )
     
