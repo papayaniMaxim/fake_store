@@ -38,7 +38,7 @@
     font-family: "Open Sans", sans-serif;
     transition: 80ms;
 }
-input:focus{
+.input:focus{
     padding: 16px 33px;
     font-size: 18px;
     box-shadow: 

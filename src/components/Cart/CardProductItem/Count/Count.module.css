@@ -1,0 +1,78 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 25px;
+    width: 80px;
+    overflow: hidden;
+    margin: 0 auto;
+    cursor: pointer;
+    margin-right: 120px;
+}
+.input_container{
+    font-family: "Montserrat", sans-serif;
+    transform: scale(1.1, 1.1);
+
+}
+.input{
+    text-align: center;
+    max-width: 25px;
+}
+
+.increment{
+    position: relative;
+    width: 16px;
+    height: 16px;
+    position: relative;
+    opacity: 0.3;
+}
+.decrement{
+    position: relative;
+    width: 16px;
+    height: 16px;
+    position: relative;
+    opacity: 0.3;
+}
+.increment_gorisontal{
+    position: relative;
+    width: 14px;
+    height: 2px;
+    border: 1px solid black;
+    margin: 0 auto;
+    top: 6px;
+    border-radius: 1px;
+}
+.increment_vertical{
+    position: relative;
+    width: 2px;
+    height: 14px;
+    border: 1px solid black;
+    margin: 0 auto;
+    top: -2px;
+    border-radius: 1px;
+}
+
+.decriment_gorisontal{
+    position: relative;
+    width: 14px;
+    height: 2px;
+    border: 1px solid black;
+    margin: 0 auto;
+    top: 6px;
+    border-radius: 1px;
+
+}
+
+.increment:active{
+    opacity: 1;
+}
+.decrement:active{
+    opacity: 1;
+}
+
+@media (max-width: 768px){
+    .container{
+        margin-right: 0;
+    }
+}

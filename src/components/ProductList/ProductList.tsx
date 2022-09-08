@@ -1,10 +1,11 @@
 import classes from './ProductList.module.css'
 import { useSelector } from 'react-redux'
-import { State } from '../interface/interfaces'
 import { useMemo } from 'react'
-import useFilter from '../hooks/useFilter'
-import MySpinner from '../UI/MySpinner'
-import TESTProductCard from './TESTProductCard'
+import { motion } from 'framer-motion'
+import useFilter from '../../hooks/useFilter'
+import TESTProductCard from './ProductItem/TESTProductCard'
+import MySpinner from '../../UI/MySpinner'
+import { State } from '../../interface/interfaces'
 
 export default function ProductList() {
      
@@ -14,20 +15,24 @@ export default function ProductList() {
     const selectedCategories = useSelector((state:State)=> state.selectedCategories)
     const filteredProducts = useFilter(products, search, sort, selectedCategories)
     const isFetching = useSelector((state: State) => state.fetching)
-    const fetchError = useSelector((state:State)=> state.productFetchError)
+    const fetchError = useSelector((state: State) => state.productFetchError)
+    const greetingWasShowed = useSelector((state: State) => state.greetingWasShowed)
 
     const productList = useMemo(() => {
-        return filteredProducts.map(product =>  <li key={product.id} ><TESTProductCard product={product} /></li>)
+        return filteredProducts.map(product => <li key={product.id} ><TESTProductCard product={product} /></li>)
     }, [filteredProducts])
     
     return (
         
         <>
             {
-                isFetching
+             isFetching
                 ?   <MySpinner/>
-                    : fetchError.error
-                        ? <div className={classes.loadErrorMassage}>{fetchError.massage}</div>
+                    : greetingWasShowed && fetchError.error
+                        ?  <motion.div
+                            initial={{scale: 0, opacity:0.1, y:400}}
+                            animate={{opacity:0.5, y:0, scale:1, transition:{delay:0.2}}}
+                            className={classes.loadErrorMassage}>{fetchError.massage}</motion.div>
                         : <ul className={classes.productlist}>
                             {productList}
                         </ul>

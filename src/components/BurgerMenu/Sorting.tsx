@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux";
-import { sortChangedAction } from "../redux/actions";
-import MySelect from "../UI/MySelect";
+import { sortChangedAction } from "../../redux/actions";
+import MySelect from "../../UI/MySelect";
 
 export default function Sorting() {
     const dispatch = useDispatch()

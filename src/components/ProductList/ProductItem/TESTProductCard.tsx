@@ -1,20 +1,31 @@
 import classes from './TESTProductCard.module.css'
-import { useState } from 'react';
-import { useDispatch } from 'react-redux';
-import { addToCard } from '../redux/actions';
-import { Product } from '../interface/interfaces';
+import { useMemo, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { motion } from 'framer-motion';
+import { Product, State } from '../../../interface/interfaces';
+import { addToCard } from '../../../redux/actions';
 
-function TESTProductCard(props: {
-    product: Product
-}) {
-
+function TESTProductCard(props: {product: Product}) {
+    
     const [descrIsOpen, setDescrIsOpen] = useState(false)
     
     let product = props.product
     
+    const cart = useSelector((state: State) => state.card)
+    
+    const inCart = useMemo(() => {
+        if (cart.filter(item => item.title === product.title).length != 0) {
+            return true
+        } else return false
+    }, [cart])
+
     const dispatch = useDispatch()
     return (
-            <div className={classes.productCard}>
+        <motion.div
+            initial={{opacity:0}}
+            whileInView={{ opacity: 1 }}
+            transition={{duration:0.3}}
+            className={classes.productCard}>
             <div className={classes.top}>
                 <div className={classes.textContent}>
                     <h2 className={classes.title}>{product.title}</h2>
@@ -42,13 +53,16 @@ function TESTProductCard(props: {
                 </div>
             </div>
             <div className={classes.bottom}>
-                <button
-                    onClick={()=> dispatch(addToCard(product))}
-                    className={classes.button}>Add to cart</button>
+                <motion.button
+                    whileHover={{ scale: 1.15 }}
+                    whileTap={{ scale: 0.9 }}
+                    transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                    onClick={() => {
+                        if (!inCart) dispatch(addToCard(product))
+                    }}
+                    className={inCart ? classes.disabled_button : classes.button} >{inCart? 'Added to cart' :'Add to cart'}</motion.button>
             </div>
-            
-            
-            </div>
+            </motion.div>
  );
 }
 

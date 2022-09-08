@@ -1,5 +1,5 @@
 import { State } from "../interface/interfaces";
-import { ADD_FETCH_PRODUCTS, ADD_TO_CARD, CATEGORY_WAS_CHANGE, CLEAN_CARD, DELETE_FROM_CARD, END_FETCHING, FULLFILLED_SENDING_ORDER, PENDING_SENDING_ORDER, PRODUCT_FETCHING_ERROR, REJECTED_SENDING_ORDER, SEARCH_WAS_CHANGE, SORT_WAS_CHANGE, START_FETCHING, START_SENDING_ORDER, } from "./actions";
+import { ADD_FETCH_PRODUCTS, ADD_TO_CARD, CATEGORY_WAS_CHANGE, CLEAN_CARD, DELETE_FROM_CARD, END_FETCHING, FULLFILLED_SENDING_ORDER, greetingWasShowedAction, GREETING_WAS_SHOWED, PENDING_SENDING_ORDER, PRODUCT_FETCHING_ERROR, REJECTED_SENDING_ORDER, SEARCH_WAS_CHANGE, SORT_WAS_CHANGE, START_FETCHING, START_SENDING_ORDER, } from "./actions";
 
 const initialState = {
     products: [],
@@ -9,7 +9,8 @@ const initialState = {
     card: [],
     sort: '',
     productFetchError: { error: false, massage: '' },
-    sendingOrderStatus: "PENDING"
+    sendingOrderStatus: "PENDING",
+    greetingWasShowed: false,
 }
 
 export const reducer = (state:State = initialState , action: any) => {
@@ -63,7 +64,10 @@ export const reducer = (state:State = initialState , action: any) => {
             return {...state, sendingOrderStatus:'REJECTED'}
         
         case PENDING_SENDING_ORDER:
-            return {...state, sendingOrderStatus:'PENDING'}
+            return { ...state, sendingOrderStatus: 'PENDING' }
+        
+        case GREETING_WAS_SHOWED:
+            return {...state, greetingWasShowed: true}
         
         default: return state
     }

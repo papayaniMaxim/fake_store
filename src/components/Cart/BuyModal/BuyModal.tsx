@@ -1,14 +1,14 @@
 import { useEffect, useMemo, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { State } from '../interface/interfaces';
-import { cleanCardAction, fullfilledSendingOrderAction, pendingSendingOrderAction, rejectedSendingOrderAction, startSendingOrderAction } from '../redux/actions';
-import sendOrder from '../services/sendOrder';
-import MySpinner from '../UI/MySpinner';
+import { State } from '../../../interface/interfaces';
+import { cleanCardAction, fullfilledSendingOrderAction, pendingSendingOrderAction, rejectedSendingOrderAction, startSendingOrderAction } from '../../../redux/actions';
+import sendOrder from '../../../services/sendOrder';
+import MySpinner from '../../../UI/MySpinner';
 import classes from './BuyModal.module.css'
 function BuyModal(props: { setOpen:() => void, open:boolean }) {
     
-    const [userName, setUserName] = useState<string>()
-    const [userPhone, setUserPhone] = useState<number | string>() 
+    const [userName, setUserName] = useState<string>('')
+    const [userPhone, setUserPhone] = useState<number | string>('') 
 
     const setOpen = props.setOpen
 

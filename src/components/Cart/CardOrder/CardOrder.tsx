@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import { useSelector } from "react-redux"
-import { Product, State } from "../interface/interfaces"
-import BuyModal from "./BuyModal"
+import { Product, State } from "../../../interface/interfaces"
+import BuyModal from "../BuyModal/BuyModal"
 import classes from "./CardOrder.module.css"
 export default function CardOrder() {
     
@@ -16,7 +16,7 @@ export default function CardOrder() {
                 <h3>${Math.round(totalPrice)}</h3>
             </div>
             <div className={classes.productscout}>
-                <h5>Product count:</h5>
+                <h5>Products count:</h5>
                 <h5>{productsCount}</h5>
             </div>
             <button

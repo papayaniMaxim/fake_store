@@ -1,11 +1,11 @@
 import { useMemo } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import useGeneratorCategory from '../hooks/useGeneratorCategory'
-import { State } from '../interface/interfaces'
-import { categoryChangedAction } from '../redux/actions'
-import MyButton2 from '../UI/MyButton2'
+import useGeneratorCategory from '../../../hooks/useGeneratorCategory'
+import { State } from '../../../interface/interfaces'
+import { categoryChangedAction } from '../../../redux/actions'
+import MyButton2 from '../../../UI/MyButton2'
+import Sorting from '../Sorting'
 import classes from './Categories.module.css'
-import Sorting from './Sorting'
 
 export default function Categories() {
     

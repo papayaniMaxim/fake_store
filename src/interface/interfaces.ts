@@ -20,4 +20,5 @@ export interface State {
     card: Product[],
     productFetchError: { error: boolean, massage: string }
     sendingOrderStatus: string,
+    greetingWasShowed:boolean,
 }

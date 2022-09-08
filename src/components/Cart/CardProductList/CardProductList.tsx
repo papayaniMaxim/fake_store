@@ -1,7 +1,7 @@
 import { useMemo } from 'react'
 import { useSelector } from 'react-redux'
-import { State } from '../interface/interfaces'
-import CardProductItem from './CardProductItem'
+import { State } from '../../../interface/interfaces'
+import CardProductItem from '../CardProductItem/CardProductItem'
 import classes from './CardProductList.module.css'
 export default function CardProductList() {
     

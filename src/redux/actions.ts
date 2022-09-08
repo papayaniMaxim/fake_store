@@ -16,6 +16,7 @@ export const PENDING_SENDING_ORDER = 'PENDING_SENDING_ORDER'
 export const FULLFILLED_SENDING_ORDER = 'FULLFILLED_SENDING_ORDER'
 export const REJECTED_SENDING_ORDER = 'REJECTED_SENDING_ORDER'
 export const CLEAN_CARD = 'CLEAN_CARD'
+export const GREETING_WAS_SHOWED = 'GREETING_WAS_SHOWED'
 
 export const incrementAction = {
     type: INCREMENT,
@@ -100,4 +101,8 @@ export const cleanCardAction = {
 
 export const pendingSendingOrderAction = {
     type: PENDING_SENDING_ORDER,
+}
+
+export const greetingWasShowedAction = {
+    type: GREETING_WAS_SHOWED
 }
