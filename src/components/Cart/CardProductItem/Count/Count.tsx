@@ -29,8 +29,8 @@ function Count(props:{order:Order}) {
                 className={classes.input_container}>
                 <input
                     type='text'
-                    value={count>1? count : 1}
-                    onChange={event =>  dispatch(cardProductCoutnChangeAction(product, +event.target.value))}
+                    value={count > 1? count : 1}
+                    onChange={event => {if (+event.target.value >= 1) dispatch(cardProductCoutnChangeAction(product, +event.target.value))}}
                     className={classes.input}>
                 </input>
             </div>
