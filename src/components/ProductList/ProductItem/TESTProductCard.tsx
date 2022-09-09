@@ -54,8 +54,8 @@ function TESTProductCard(props: {product: Product}) {
             </div>
             <div className={classes.bottom}>
                 <motion.button
-                    whileHover={{ scale: 1.15 }}
-                    whileTap={{ scale: 0.9 }}
+                    whileHover={inCart ? {scale: 1} : { scale: 1.15 }}
+                    whileTap={inCart ? {scale: 1} : { scale: 0.9 }}
                     transition={{ type: "spring", stiffness: 400, damping: 17 }}
                     onClick={() => {
                         if (!inCart) dispatch(addToCard(product))

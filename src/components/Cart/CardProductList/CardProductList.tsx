@@ -20,7 +20,7 @@ export default function CardProductList() {
             {cardProducts.length 
                 ?   <div>
                         {cardProductList}
-                    </div>
+                    </div >
                 :   <p className={classes.empty}>Cart is empty</p>}
         </div>
     )

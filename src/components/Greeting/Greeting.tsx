@@ -35,7 +35,7 @@ function Greeting(props:{closePortal():void}) {
                     initial={{  scale: 0 }}
                     animate={{ scale: 1.3 }}
                     transition={{
-                        repeat: 4,
+                        repeat: 0,
                         type: "spring",
                         stiffness: 500,
                         damping: 70,
