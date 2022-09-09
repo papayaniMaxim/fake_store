@@ -10,7 +10,7 @@ export default function CardProductList() {
     const cardProductList = useMemo(() => {
         return (
             <div>
-                {cardProducts.map(product => <div key={product.id}><CardProductItem product={product} /></div>)}
+                {cardProducts.map(order => <div key={order.product.id}><CardProductItem order={order} /></div>)}
             </div>
         )
     },[cardProducts])

@@ -11,14 +11,22 @@ export interface Product {
     image: string;
     rating: Rating;
 }
+
+export interface Order {
+    product: Product,
+    count: number,
+}
+
 export interface State {
     fetching: boolean;
     products: Product[];
     search: string;
     sort: string,
     selectedCategories: string[],
-    card: Product[],
+    card: Order[],
     productFetchError: { error: boolean, massage: string }
     sendingOrderStatus: string,
-    greetingWasShowed:boolean,
+    greetingWasShowed: boolean,
+    orders: Order[],
 }
+

@@ -1,10 +1,15 @@
 import { motion } from 'framer-motion';
-import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { Order } from '../../../../interface/interfaces';
+import { cardProductCoutnChangeAction } from '../../../../redux/actions';
 import classes from './Count.module.css'
 
-function Count() {
-    const [count, setCount] = useState(1)
+function Count(props:{order:Order}) {
     
+    const product = props.order.product
+    const count = props.order.count    
+    const dispatch = useDispatch()
+
     return (
         <div className={classes.container}>
             <motion.div
@@ -12,7 +17,11 @@ function Count() {
                 whileHover={{ scale: 1.2 }}
                 whileTap={{ scale: 0.9 }}
                 transition={{ type: "spring", stiffness: 400, damping: 17 }}
-                onClick={() => { if (count > 1) setCount(prev => --prev) }}>
+                onClick={() => {
+                     if (count > 1) {
+                        dispatch(cardProductCoutnChangeAction(product, count-1))
+                    }
+                }}>
                 <div className={classes.decriment_gorisontal}>
                 </div>
             </motion.div>
@@ -20,8 +29,8 @@ function Count() {
                 className={classes.input_container}>
                 <input
                     type='text'
-                    value={count}
-                    onChange={event => setCount(prev => +event.target.value)}
+                    value={count>1? count : 1}
+                    onChange={event =>  dispatch(cardProductCoutnChangeAction(product, +event.target.value))}
                     className={classes.input}>
                 </input>
             </div>
@@ -30,7 +39,7 @@ function Count() {
                 whileHover={{ scale: 1.2 }}
                 whileTap={{ scale: 0.9 }}
                 transition={{ type: "spring", stiffness: 400, damping: 17 }}
-                onClick={() => setCount(prev => ++prev)}>
+                onClick={() => dispatch(cardProductCoutnChangeAction(product, count+1))}>
                 <div
                     className={classes.increment_gorisontal}>
                 </div>

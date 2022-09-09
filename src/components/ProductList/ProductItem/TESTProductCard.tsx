@@ -14,7 +14,7 @@ function TESTProductCard(props: {product: Product}) {
     const cart = useSelector((state: State) => state.card)
     
     const inCart = useMemo(() => {
-        if (cart.filter(item => item.title === product.title).length != 0) {
+        if (cart.filter(order => order.product.title === product.title).length != 0) {
             return true
         } else return false
     }, [cart])

@@ -1,4 +1,4 @@
-import { Product } from "../interface/interfaces"
+import { Order, Product } from "../interface/interfaces"
 
 export const INCREMENT = 'INCREMENT'
 export const DECREMENT = 'DECREMENT'
@@ -17,6 +17,7 @@ export const FULLFILLED_SENDING_ORDER = 'FULLFILLED_SENDING_ORDER'
 export const REJECTED_SENDING_ORDER = 'REJECTED_SENDING_ORDER'
 export const CLEAN_CARD = 'CLEAN_CARD'
 export const GREETING_WAS_SHOWED = 'GREETING_WAS_SHOWED'
+export const CARD_PRODUCT_ITEM_COUNT_WAS_CHANGED = 'CARD_PRODUCT_ITEM_COUNT_WAS_CHANGED'
 
 export const incrementAction = {
     type: INCREMENT,
@@ -105,4 +106,8 @@ export const pendingSendingOrderAction = {
 
 export const greetingWasShowedAction = {
     type: GREETING_WAS_SHOWED
+}
+
+export function cardProductCoutnChangeAction(product:Product, count: number) {
+    return {type: CARD_PRODUCT_ITEM_COUNT_WAS_CHANGED, order:{product, count}}
 }

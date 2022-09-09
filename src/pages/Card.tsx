@@ -1,24 +1,29 @@
-import { useMemo } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import CardOrder from '../components/Cart/CardOrder/CardOrder';
 import CardProductList from '../components/Cart/CardProductList/CardProductList';
-import Greeting from '../components/Greeting/Greeting';
-import Portal from '../components/Portal';
 import { State } from '../interface/interfaces';
-import { greetingWasShowedAction } from '../redux/actions';
 import classes from './Card.module.css'
 
 function Card() {
-    const dispatch = useDispatch()
-    const greetingWasShowed = useSelector((state:State) => state.greetingWasShowed)
-    const greetings = useMemo(()=>(<Portal><Greeting closePortal={() => dispatch(greetingWasShowedAction)} /></Portal>),[])
+    let navigate = useNavigate()
+    let greetingWasShowed = useSelector((state: State) => state.greetingWasShowed)
+    
+    useEffect(() => {
+        if (!greetingWasShowed) {
+            navigate('/')
+        }
+    }, [])
 
     return (
-        <div className={classes.card}>
-            {!greetingWasShowed && greetings}
-            <CardProductList />
-            <CardOrder/>
-        </div> );
-}
+        <>{greetingWasShowed
+            ? <div className={classes.card}>
+                <CardProductList />
+                <CardOrder />
+            </div>
+            : null}</>
+    );
 
+}
 export default Card;
