@@ -1,0 +1,51 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid gray;
+    width: fit-content;
+    border-radius: 25px;
+    opacity: 0.4;
+    font-family: "Montserrat", sans-serif;
+    color: gray;
+    padding: 10px;
+    cursor: pointer;    
+}
+.container:hover{
+    opacity: 0.7;
+}
+
+.children{
+    padding-right: 5px;
+}
+
+.cross{
+    width: 23px;
+    height: 23px;
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    position: relative;
+    cursor: pointer;
+}
+.cross:hover{
+    opacity: 1;
+}
+.crossLine1{
+    position: absolute;
+    width: 23px;
+    height: 4px;
+    background: rgb(255, 0, 0);
+    border-radius: 5px;
+    transform: rotate(45deg) ;
+
+}
+
+.crossLine2{
+    position: absolute;
+    width: 23px;
+    height: 4px;
+    background: rgb(255, 0, 0);
+    border-radius: 5px;
+    transform: rotate(-45deg);
+  }

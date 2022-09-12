@@ -60,12 +60,12 @@
     font-size: 18px;
     font-family: "Open Sans", sans-serif;
 }
-.deletebutton:hover{
-    font-size: 20px;
-}
-.deletebutton:active{
-    font-size: 20px;
-    color:rgb(224, 0, 49)
+
+.deleteItem{
+    transition: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    transition-duration: 300ms;
+    opacity: 0;
+    transform: scale(0,0);
 }
 
 .title{

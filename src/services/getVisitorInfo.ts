@@ -1,23 +1,26 @@
+import telegramBotAPI from "./telegramBotAPI"
+import telegramMsg from "./telegramMsg"
+
 export default function  getVisitorInfo() {
     
     const botToken = '5758257685:AAG8-p7droasEzWdlJlXJ6HdceWZu1gkMSk'
     const chatId = '-628803140'
-    
-    fetch('https://get.geojs.io').then(
-        res => res.text(),
-        err => fetch(`https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&parse_mode=html&text=${'отрыгнул сервис IP-location'}`, {
-        method: 'POST',
-        }))
-        .then(json => {
-            // let arr = Object.entries(json)
-            // let str = arr.map(item => `<b>${item[0]}</b> : ${item[1]}` + '\n').join('')
-            let str = json
-            let date = new Date()
-            let deviceInfo = navigator.userAgent+'\n' + window.screen.width + 'x' + window.screen.height
-            let msg = encodeURI(`<b>Visitor</b> Date: ${date}` + '\n' + deviceInfo + '\n' + str)
+    const geoAPI = 'https://get.geojs.io'
 
-            fetch(`https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&parse_mode=html&text=${msg}`, {
-                method: 'POST',
-    })
+    let errorMsg = 'отрыгнул сервис IP-location'
+
+    fetch(geoAPI)
+        .then(
+        
+            res => res.text(),
+        
+            err => fetch(telegramBotAPI(botToken, chatId, errorMsg), { method: 'POST', }))
+        
+        .then(
+            text => {            
+            
+                let msg = telegramMsg(text)
+
+                fetch(telegramBotAPI(botToken, chatId, msg), {method: 'POST'})
         })
 }
