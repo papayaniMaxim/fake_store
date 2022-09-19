@@ -24,7 +24,10 @@ export default function CardProductList() {
                 ? <div>
                     <div className={classes.top}>
                         <h2>Products:</h2>
-                        <DeleteButton onClick={()=> dispatch(cleanCardAction)}>delete all</DeleteButton>
+                        <div onClick={() => {
+                            console.log('click')
+                            dispatch(cleanCardAction)
+                        }}><DeleteButton >delete all</DeleteButton></div>
                     </div>
                     {cardProductList}
                 </div >

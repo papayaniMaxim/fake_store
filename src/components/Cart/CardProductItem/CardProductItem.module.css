@@ -1,6 +1,6 @@
 
-
 .itemcontainer{
+    height: fit-content;
     padding: 10px;
     display: flex;
     flex-direction: row;
@@ -38,7 +38,6 @@
     padding: 0 10px;
 }
 
-
 .price{
     font-family: "Fjalla One", sans-serif;
     color: #252525;
@@ -63,7 +62,7 @@
 
 .deleteItem{
     transition: cubic-bezier(0.455, 0.03, 0.515, 0.955);
-    transition-duration: 300ms;
+    transition-duration: 500ms;
     opacity: 0;
     transform: scale(0,0);
 }

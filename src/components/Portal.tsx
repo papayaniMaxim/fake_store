@@ -13,7 +13,7 @@ function Portal(props:{children:ReactNode}) {
     return createPortal(
         <div
             style={{
-                zIndex: '75',
+                zIndex: '99',
                 color: 'black',
                 position: "fixed",
                 top: 0,

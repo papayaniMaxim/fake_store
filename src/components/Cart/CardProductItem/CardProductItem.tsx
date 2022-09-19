@@ -32,7 +32,7 @@ export default function CardProductItem(props:{order:Order}) {
                 <div
                     onClick={() => {
                         setRemoveItem(() => true)
-                        setTimeout(() => dispatch(deleteFromCard(product.id)), 300)
+                        setTimeout(() => dispatch(deleteFromCard(product.id)), 600)
                     }}
                     className={classes.deletebutton}><DeleteButton></DeleteButton></div>
             </div>

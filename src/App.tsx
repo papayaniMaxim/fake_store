@@ -5,14 +5,15 @@ import Navigations from "./components/Navigations/Navigations";
 import useFetchProducts from "./hooks/useFetchProducts";
 import { useEffect } from "react";
 import getVisitorInfo from "./services/getVisitorInfo";
+import CallMeButton from "./components/Navigations/CallMeButton/CallMeButton";
 
 function App() {
     
     useFetchProducts()
-   // useEffect(() => getVisitorInfo(), [])
+    useEffect(() => getVisitorInfo(), [])
 
     return (
-        <> 
+        <>
             <Navigations />
             <Routes>
                 <Route path="/" element={<HomePage/>} />
