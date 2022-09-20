@@ -1,4 +1,7 @@
 .cardorder{
+    position: fixed;
+    top: 80px;
+    right: 0;
     border-radius: 20px;
     width: 30%;
     height: 200px;
@@ -45,6 +48,7 @@ h5{
 
 @media (max-width:768px){
     .cardorder{
+        position: relative;
         border-radius: 20px;
         width: 90%;
         margin: 10px 20px;

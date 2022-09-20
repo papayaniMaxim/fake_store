@@ -19,7 +19,7 @@ export default function CardProductList() {
     },[cardProducts])
 
     return (
-        <div className={classes.cardproductlist}>
+            <div className={classes.cardproductlist}>
             {cardProducts.length 
                 ? <div>
                     <div className={classes.top}>

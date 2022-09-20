@@ -1,19 +1,40 @@
 
 .itemcontainer{
     height: fit-content;
-    padding: 10px;
+    min-height: 200px;
+    padding: 20px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    border-top: 1px solid rgba(0, 0, 0, 0.169);
 }
 .imagecontainer{
     min-width: 80px;
-    min-height: 100px;
     max-width: 80px;
     min-height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+    transition: all;
+    transition-duration: 500ms;
+}
+.imagecontainerModal{
+    border-radius: 25px;
+    background-color: white;
+    padding: 20px;
+    width: 70vw;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all;
+    transition-duration: 500ms;
+}
+
+.imagecontainer:hover{
+    transform: scale(1.1);
 }
 
 .image{
@@ -24,10 +45,11 @@
     display: flex;
     flex-direction: row;
     max-width: 70%;
+    align-items: center;
 }
 .description{
     margin: 0;
-    padding: 5px 0;
+    padding: 5px 10px;
     font-family: "Open Sans", sans-serif;
     font-weight: 300;
     line-height: 120%;
@@ -39,6 +61,7 @@
 }
 
 .price{
+    display: inline-block;
     font-family: "Fjalla One", sans-serif;
     color: #252525;
     font-size: 26px;
@@ -68,6 +91,7 @@
 }
 
 .title{
+    padding: 5px 10px;
     font-family: "Montserrat", sans-serif;
     font-weight: 800;
 }

@@ -263,3 +263,32 @@
         opacity: 0.9;
     }
 }
+
+.imagecontainerModal{
+    border-radius: 25px;
+    background-color: white;
+    padding: 20px;
+    width: 70vw;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all;
+    transition-duration: 500ms;
+}
+.imageContainer{
+    cursor: pointer;
+}
+.image{
+    transition: all;
+    transition-duration: 500ms;
+}
+.image:hover{
+    scale: 1.1;
+}
+.imageModal{
+    max-width: 90%;
+    max-height: 100%;
+    object-fit:cover;
+}

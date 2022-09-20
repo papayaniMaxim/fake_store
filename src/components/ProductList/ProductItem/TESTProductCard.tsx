@@ -4,10 +4,12 @@ import { useDispatch, useSelector } from 'react-redux';
 import { motion } from 'framer-motion';
 import { Product, State } from '../../../interface/interfaces';
 import { addToCard } from '../../../redux/actions';
+import MyModal from '../../../UI/MyModal';
 
 function TESTProductCard(props: {product: Product}) {
     
     const [descrIsOpen, setDescrIsOpen] = useState(false)
+    const [imgModalOpen, setImgModalOpen] = useState(false)
     
     let product = props.product
     
@@ -20,6 +22,7 @@ function TESTProductCard(props: {product: Product}) {
     }, [cart])
 
     const dispatch = useDispatch()
+    
     return (
         <motion.div
             initial={{opacity:0}}
@@ -48,9 +51,16 @@ function TESTProductCard(props: {product: Product}) {
                     }
                 </div>
 
-                <div className={classes.imageContainer}>
+                <div className={classes.imageContainer} onClick={()=> setImgModalOpen(()=>true)}>
                         <img className={classes.image} src={product.image}></img>
                 </div>
+                
+                {imgModalOpen && <MyModal
+                    setModalIsOpen={() => setImgModalOpen(() => false)}>
+                    <div className={classes.imagecontainerModal} onClick={()=> setImgModalOpen(()=>true)}>
+                        <img className={classes.imageModal} src={product.image}></img>
+                    </div>
+                </MyModal>}
             </div>
             <div className={classes.bottom}>
                 <motion.button

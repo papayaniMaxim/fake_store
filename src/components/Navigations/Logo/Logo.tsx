@@ -12,10 +12,10 @@ export default function Logo() {
             animate={{ x: 0 }}
             transition={{type:'spring', stiffness:300, delay:1}}
             className={classes.logo}>
-            <p className={classes.l}>L</p>
-            <p className={classes.o}>O</p>
-            <p className={classes.g}>G</p>
-            <p className={classes.o1}>O</p>
+            <p className={classes.l}>S</p>
+            <p className={classes.o}>H</p>
+            <p className={classes.g}>O</p>
+            <p className={classes.o1}>P</p>
           </motion.div>
         </motion.div>
     )
