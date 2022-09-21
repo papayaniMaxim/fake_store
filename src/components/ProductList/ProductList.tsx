@@ -21,8 +21,6 @@ export default function ProductList() {
     const productList = useMemo(() => {
         return filteredProducts.map(product => <li key={product.id} ><TESTProductCard product={product} /></li>)
     }, [filteredProducts])
-
-    useEffect(()=> console.log('Product list render'))
     
     return (
         

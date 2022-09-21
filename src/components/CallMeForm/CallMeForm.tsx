@@ -3,10 +3,11 @@ import sendMessage from '../../services/sendMessage';
 import MySpinner from '../../UI/MySpinner';
 import classes from './CallMeForm.module.css'
 
-function CallMeForm() {
+function CallMeForm(props:{setOpenModal():void}) {
 
     const [userName, setUserName] = useState<string>('')
     const [userPhone, setUserPhone] = useState<number | string>('')
+    const [userCompany, setUserCompany] = useState<string>()
     const [message, setMessage] = useState<string>('')
     const [sendingStatus, setSendingStatus] = useState('PENDING')    
 
@@ -17,9 +18,8 @@ function CallMeForm() {
                 setSendingStatus('FULLFILLED')
             }, error => {
                 setSendingStatus('REJECTED')
-            })
+            }).finally(()=> setTimeout(props.setOpenModal, 2000))
     }
-    
     
     return (<>
         {sendingStatus === 'PENDING' ? (
@@ -28,26 +28,30 @@ function CallMeForm() {
                 <input value={userName}
                     onChange={(e) => setUserName(() => e.target.value)}
                     className={classes.input}
-                    placeholder='Ваше имя' type="text" />
+                        placeholder='Name / Имя' type="text" />
+                <input value={userCompany}
+                    onChange={(e) => setUserCompany(() => e.target.value)}
+                    className={classes.input}
+                    placeholder='Company / Компания' type="text" />
                 <input value={userPhone}
                     onChange={(e) => {
                     if (+e.target.value) setUserPhone(() => +e.target.value)
                     if (e.target.value === '') setUserPhone(() => '')
                 }}
                     className={classes.input}
-                    placeholder='Ваш телефон'
+                    placeholder='Tel / Телефон'
                     type="tel" />
                 <textarea
                     value={message}
                     onChange={(e) => setMessage(() => e.target.value)}
                     className={[classes.input, classes.textarea].join(' ')}
-                    placeholder='Сообщение...' />
+                    placeholder='Message / Сообщение...' />
                 <button
                     onClick={(e) => {
                         e.preventDefault()
                         handler()
                     }}
-                    className={classes.button}>Отправить</button>
+                    className={classes.button}>Send / Отправить</button>
             </form>
         </div>)
             : (sendingStatus === 'LOAD' && <MySpinner />) || (

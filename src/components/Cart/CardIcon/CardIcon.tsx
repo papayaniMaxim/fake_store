@@ -1,16 +1,14 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
-import { useNavigate, useParams } from 'react-router-dom';
 import { State } from '../../../interface/interfaces';
-import CardOrder from '../CardOrder/CardOrder';
 import CardProductList from '../CardProductList/CardProductList';
 import classes from './CardIcon.module.css'
 
 function CardIcon() {
     const [modalOpen, setModalOpen] = useState(false)
     const cardItemsCount = useSelector((state: State) => state.card.length)
-    useParams()
+
     return (
         <motion.div
         whileHover={{ scale: 1.2 }}

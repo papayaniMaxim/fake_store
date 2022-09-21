@@ -9,7 +9,7 @@ function CallMeButton() {
     return (
         <>
             {openModal
-                ? <MyModal setModalIsOpen={() => setOpenModal(false)}><CallMeForm /></MyModal>
+                ? <MyModal setModalIsOpen={() => setOpenModal(false)}><CallMeForm setOpenModal={()=>setOpenModal(()=> false)} /></MyModal>
                 :  <motion.button
                     whileHover={{ scale: 1.2 }}
                     whileTap={{ scale: 0.7 }}
