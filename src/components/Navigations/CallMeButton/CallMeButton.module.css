@@ -4,12 +4,11 @@
     width: 180px;
     font-weight: 100;
     font-size: 18px;
-    line-height: 0%;
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-    opacity: 0.5;
+    opacity: 0.8;
     background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5849 45%,#d6249e 60%,#2859eb 90%);
     box-shadow: 0px 3px 10px rgba(0,0,0,.25);
         
@@ -41,6 +40,38 @@
     }
     100%{
         scale: 1.2;
+    }
+
+}
+
+.content{
+    width: fit-content;
+    height: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+.contentItem{
+    color:white;
+    position: relative;
+    line-height: 25px;
+    animation-name: scrolling;
+    animation-duration: 4s ;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes scrolling {
+    0%{
+        transform: translateY(-3px); 
+    }
+    45%{
+        transform: translateY(-3px);
+    }
+    55%{
+        transform: translateY(-28px);
+    }
+    100%{
+       transform: translateY(-28px); 
     }
 
 }

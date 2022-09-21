@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { State } from '../../../interface/interfaces';
 import CardProductList from '../CardProductList/CardProductList';
@@ -8,14 +8,15 @@ import classes from './CardIcon.module.css'
 function CardIcon() {
     const [modalOpen, setModalOpen] = useState(false)
     const cardItemsCount = useSelector((state: State) => state.card.length)
-
-
+    
     return (
         <motion.div
         whileHover={{ scale: 1.2 }}
         whileTap={{ scale: 0.9 }}
             transition={{ type: "spring", stiffness: 400, damping: 17 }}
-            onMouseEnter={() => cardItemsCount && (window.innerWidth>1000) && setModalOpen(() => true)}
+            onMouseEnter={() => {
+                !window.location.href.endsWith('card') && cardItemsCount && (window.innerWidth > 1000) && setModalOpen(() => true)
+            }}
             onMouseLeave={() => setModalOpen(() => false)}
             onClick={() => setModalOpen(() => false)}>
             
