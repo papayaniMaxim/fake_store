@@ -31,7 +31,8 @@ function Greeting(props:{closePortal():void}) {
     return (
         <motion.div variants={variants} initial='hiden' animate='visible' className={classes.container}>
             <motion.div variants={timerAnim} className={classes.timer}>{timer}</motion.div>
-            <motion.img variants={timerAnim}
+            <motion.img
+                    variants={timerAnim}
                     initial={{  scale: 0 }}
                     animate={{ scale: 1.3 }}
                     transition={{
@@ -40,7 +41,7 @@ function Greeting(props:{closePortal():void}) {
                         stiffness: 500,
                         damping: 70,
                         repeatType: 'reverse',
-                        delay:1,
+                        delay:3,
                     
                     }}
                     className={classes.image} src="https://www.pngall.com/wp-content/uploads/5/Hello-Word-PNG.png" />

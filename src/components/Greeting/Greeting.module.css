@@ -62,11 +62,12 @@
     background: #fff;
     color: #115dd8;
 }
+.p{
+    padding: 3px;
+}
 
 .image{
     width: 100px;
     height: 100px;
-}
-.p{
-    padding: 3px;
+
 }
