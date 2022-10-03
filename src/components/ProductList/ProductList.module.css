@@ -1,6 +1,4 @@
-
-.loadErrorMassage{
-
+.loadErrorMassage {
     width: fit-content;
     font-size: 30px;
     color: red;
@@ -9,20 +7,17 @@
     border-radius: 20px;
     margin: 0 auto;
     padding: 50px;
-    
 }
-@media (max-width: 768px){
-    .productlist{
+@media (max-width: 768px) {
+    .productlist {
         overflow: scroll;
         margin: 0 auto;
         min-height: 100vh;
-       border: 2px solid green;
-       padding: 0 0 0 50px ;
-        }
-
+        padding: 0 0 0 50px;
+    }
 }
-@media (min-width: 768px)  {
-    .productlist{
+@media (min-width: 768px) {
+    .productlist {
         display: grid;
         grid-template-columns: 1fr 1fr;
         max-width: 80%;
@@ -30,12 +25,11 @@
     }
 }
 
-@media (min-width: 1150px)  {
-    .productlist{
+@media (min-width: 1150px) {
+    .productlist {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         max-width: 80%;
         margin: 0 auto;
     }
 }
-

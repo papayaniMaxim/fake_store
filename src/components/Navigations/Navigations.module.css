@@ -45,6 +45,6 @@
     flex-direction: row;
     justify-content: space-between;
     width: 6vw;
-    min-width: 80px;
+    min-width: 70px;
     max-width: 150px;
 }

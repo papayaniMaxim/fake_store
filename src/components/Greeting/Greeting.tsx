@@ -56,6 +56,7 @@ function Greeting() {
                 <motion.p className={classes.p} variants={timerAnim}>- React.js</motion.p>
                 <motion.p className={classes.p} variants={timerAnim}>- Redux</motion.p>
                 <motion.p className={classes.p} variants={timerAnim}>- Framer Motion</motion.p>
+                <motion.p className={classes.p} variants={timerAnim}>- Firebase auth</motion.p>
                 <motion.p className={classes.p} variants={timerAnim}>Данные с сервиса fakestoreapi.com</motion.p>
             </motion.div>
             <motion.button

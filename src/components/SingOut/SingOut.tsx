@@ -2,7 +2,7 @@ import { getAuth, signOut } from 'firebase/auth';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { State } from '../../interface/interfaces';
-import { addUserInfo, singOutAction } from '../../redux/actions';
+import { singOutAction } from '../../redux/actions';
 import classes from './SingOut.module.css'
 
 function SingOut(props: {
@@ -33,7 +33,8 @@ function SingOut(props: {
                 <h2 className={classes.rowValue}>{userInfo?.email}</h2>
             </div>
         </div>
-        <button
+        <div style={{display:'flex', flexDirection:'row', justifyContent:'space-between'}}>
+            <button
             onClick={() => {
                 const auth = getAuth()
                 signOut(auth).then(() => {
@@ -43,6 +44,9 @@ function SingOut(props: {
                 }, e => console.log(e))
             }}
             className={classes.button}>Sing out</button>
+        <button
+            onClick={() => props.setModalIsOpen()}
+            className={classes.button}>Cancel</button></div>
     </div>);
 }
 
