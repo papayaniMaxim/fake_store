@@ -7,19 +7,20 @@ import MySpinner from '../../../UI/MySpinner';
 import classes from './BuyModal.module.css'
 function BuyModal(props: { setOpen:() => void, open:boolean }) {
     
-    const [userName, setUserName] = useState<string>('')
-    const [userPhone, setUserPhone] = useState<number | string>('') 
+    const { card, userInfo } = useSelector((state: State) => state)
+
+    const [userEmail, setUserEmail] = useState<string>(userInfo?.email || '')
+    const [userPhone, setUserPhone] = useState<number | string>(userInfo?.tel || '') 
 
     const setOpen = props.setOpen
 
-    const card = useSelector((state: State) => state.card)
     const sendingOrderStatus = useSelector((state:State)=> state.sendingOrderStatus)
     
     const dispatch = useDispatch()
     
     const handler = () => {
         dispatch(startSendingOrderAction)
-        sendOrder(userName, userPhone, card)
+        sendOrder(userEmail, userPhone, card)
             .then(resolve => {
                 dispatch(fullfilledSendingOrderAction)
                 dispatch(cleanCardAction)
@@ -40,8 +41,9 @@ function BuyModal(props: { setOpen:() => void, open:boolean }) {
             <form className={classes.form}>
                     <input
                         className={classes.input}
-                        placeholder='Your name'
-                        onChange = { event => setUserName(() => event.target.value )}>
+                        placeholder='Your email'
+                        value={userEmail}
+                        onChange = { event => setUserEmail(() => event.target.value )}>
                     </input>
                         
                     <input
@@ -57,7 +59,7 @@ function BuyModal(props: { setOpen:() => void, open:boolean }) {
                     <button
                         className={classes.button}
                         onClick={event => { event.preventDefault(); handler() }}>
-                        Submit
+                        Send order
                     </button>
                 </form>
             )
@@ -73,7 +75,7 @@ function BuyModal(props: { setOpen:() => void, open:boolean }) {
                 <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/OOjs_UI_icon_error-destructive.svg/240px-OOjs_UI_icon_error-destructive.svg.png' /></div>
         }
 
-    }, [sendingOrderStatus, userName, userPhone])
+    }, [sendingOrderStatus, userEmail, userPhone])
   
     return (
         <div className={classes.background}

@@ -4,15 +4,12 @@
     font-family: 'Comfortaa', cursive;
     display: flex;
     flex-direction: row;
-    position: relative;
     font-size: large;
     font-weight: 700;
-    color:rgb(255, 255, 255);
-    animation-name: logo_neon;
+    /* animation-name: logo_neon;
     animation-duration: 5s;
     animation-iteration-count: infinite;
-    animation-direction: alternate;
-
+    animation-direction: alternate; */
 }
 
 @keyframes logo_neon {
@@ -35,42 +32,64 @@
     }
 }
 
-.l{
+.s{
     color: white;
     animation-name: o_animation;
-    animation-duration: 0.5s;
-    animation-direction: normal;
-    animation-iteration-count: 2;
+    animation-duration: 10s;
+    animation-direction: infinite;
+    animation-iteration-count: infinite;
     animation-delay: 1.1s;
     transition: all;
     transition: cubic-bezier(1,-0.19, 0.03, 2.29);
  }
 
-
+.h{
+    color: white;
+    animation-name: o_animation;
+    animation-duration: 10s;
+    animation-direction: normal;
+    animation-iteration-count: infinite;
+    animation-delay: 1.3s;
+    transition: all;
+    transition: cubic-bezier(1,-0.19, 0.03, 2.29);  
+}
 .o{
     color: white;
     animation-name: o_animation;
-    animation-duration: 0.5s;
+    animation-duration: 10s;
     animation-direction: normal;
-    animation-iteration-count: 2;
+    animation-iteration-count: infinite;
     animation-delay: 1.3s;
+    transition: all;
+    transition: cubic-bezier(1,-0.19, 0.03, 2.29);
+}
+.p{
+    color: white;
+    animation-name: o_animation;
+    animation-duration: 10s;
+    animation-direction: normal;
+    animation-iteration-count: infinite;
+    animation-delay: 1.2s;
     transition: all;
     transition: cubic-bezier(1,-0.19, 0.03, 2.29);
     
 }
 @keyframes o_animation{
-    0%{text-shadow:
+    97%{
+        color: white;
+        scale: (1, 1);
+    }
+    98%{
+        text-shadow:
         0 0 7px rgb(25, 0, 255),
         0 0 10px rgb(25, 0, 255),
         0 0 21px rgb(25, 0, 255),
         0 0 42px rgb(0, 234, 255),
         0 0 82px rgb(0, 234, 255);
         color: rgb(17, 49, 255);
+        scale: (1, 1);
     }
-    50%{
-        text-shadow: none; 
-    }
-    60%{
+    99%{
 
         text-shadow:
         0 0 7px rgb(249, 0, 0),
@@ -79,10 +98,6 @@
         0 0 42px rgb(255, 0, 111),
         0 0 82px rgb(255, 255, 255);
     }
-    75%{
-        text-shadow: none;
-        /* opacity: 0; */
-    }
     100%{
         text-shadow:
         0 0 7px rgb(255, 255, 255),
@@ -90,27 +105,6 @@
         0 0 21px rgb(255, 255, 255),
         0 0 42px rgb(255, 255, 255),
         0 0 82px rgb(255, 255, 255);
-        transform: scale(1.1, 1.1);
+        scale:(1.3, 1.1);
     }
-}
-.g{
-    color: white;
-    animation-name: o_animation;
-    animation-duration: 0.5s;
-    animation-direction: normal;
-    animation-iteration-count: 2;
-    animation-delay: 1.3s;
-    transition: all;
-    transition: cubic-bezier(1,-0.19, 0.03, 2.29);
-}
-.o1{
-    color: white;
-    animation-name: o_animation;
-    animation-duration: 0.5s;
-    animation-direction: normal;
-    animation-iteration-count: 2;
-    animation-delay: 1.2s;
-    transition: all;
-    transition: cubic-bezier(1,-0.19, 0.03, 2.29);
-    
 }

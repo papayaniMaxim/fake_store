@@ -1,0 +1,82 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    animation-name: anim;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    background: #fff;
+    padding: 30px;
+    border-radius: 25px;
+
+}
+
+@keyframes anim {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.infoTable{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border:1px solid rgba(0, 0, 0, 0.329);
+    border-radius: 25px;
+    width: fit-content;
+    padding: 20px;
+}
+.tableTitle{
+    color: #000000;
+    font-size: 20px;
+    transition:200ms;
+    font-family: "Open Sans", sans-serif;
+    padding-bottom: 20px;
+}
+
+.tableRow{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-top: 1px solid rgba(0, 0, 0, 0.329);
+    
+}
+.rowTitle{
+    /* padding: 14px 30px; */
+    color: #00000071;
+    font-size: 16px;
+    transition:200ms;
+    font-family: "Open Sans", sans-serif;
+    padding: 20px;
+}
+.rowValue{
+    color: #3b0031;
+    font-size: 16px;
+    transition:200ms;
+    font-family: "Open Sans", sans-serif;
+    padding: 20px;
+}
+.button{
+    cursor: pointer;
+    border: 1px solid #cb11ab;
+    padding: 14px 30px;
+    border-radius: 200px;
+    color: #fff;
+    background: #cb11ab;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    transition:200ms;
+    margin: 20px;
+}
+
+.button:hover{
+    background: #fff;
+    color: #115dd8;
+}

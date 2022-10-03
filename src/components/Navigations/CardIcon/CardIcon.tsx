@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { State } from '../../../interface/interfaces';
-import CardProductList from '../CardProductList/CardProductList';
+import CardProductList from '../../Cart/CardProductList/CardProductList';
 import classes from './CardIcon.module.css'
 
 function CardIcon() {

@@ -1,13 +1,8 @@
 import { motion } from 'framer-motion';
-import { MouseEvent, useEffect, useState } from 'react';
+import { useState } from 'react';
 import MyModal from '../../../UI/MyModal';
 import CallMeForm from '../../CallMeForm/CallMeForm';
 import classes from './CallMeButton.module.css'
-
-interface Rect {
-    x: number
-    y: number
-}
 
 function CallMeButton() {
 
@@ -26,8 +21,8 @@ function CallMeButton() {
                     onClick={(e) => setOpenModal(true)}>
                     
                     <div className={classes.content}>
-                        <div className={classes.contentItem}>Напиши мне</div>
-                        <div className={classes.contentItem}>Call me</div>
+                        <div className={classes.contentItem}>Написать мне</div>
+                        <div className={classes.contentItem}>Write me</div>
                     </div>
                 
                 </motion.button>}

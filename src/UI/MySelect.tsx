@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import classes from './MySelect.module.css'
 
 

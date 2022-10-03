@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import sendMessage from '../../services/sendMessage';
+import { normalisePhoneNumber } from '../../services/validators';
 import MySpinner from '../../UI/MySpinner';
 import classes from './CallMeForm.module.css'
 
@@ -33,10 +34,11 @@ function CallMeForm(props:{setOpenModal():void}) {
                     onChange={(e) => setUserCompany(() => e.target.value)}
                     className={classes.input}
                     placeholder='Company / Компания' type="text" />
+                
                 <input value={userPhone}
                     onChange={(e) => {
-                    if (+e.target.value) setUserPhone(() => +e.target.value)
-                    if (e.target.value === '') setUserPhone(() => '')
+                    e.target.value = normalisePhoneNumber(e.target.value)
+                    setUserPhone(() => e.target.value)
                 }}
                     className={classes.input}
                     placeholder='Tel / Телефон'

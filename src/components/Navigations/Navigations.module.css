@@ -22,3 +22,29 @@
     text-decoration: none;
 }
 
+.button{
+    cursor: pointer;
+    border: 1px solid #cb11ab;
+    padding: 14px 30px;
+    border-radius: 200px;
+    color: #fff;
+    background: #cb11ab;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    transition:200ms;
+}
+
+.button:hover{
+    background: #fff;
+    color: #115dd8;
+}
+
+
+.rightModule{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 6vw;
+    min-width: 80px;
+    max-width: 150px;
+}

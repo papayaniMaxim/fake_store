@@ -1,20 +1,24 @@
-.productlist{
-overflow: scroll;
-margin: 0 auto;
-}
+
 .loadErrorMassage{
-    width: 50%;
-    height: 20%;
+
+    width: fit-content;
     font-size: 30px;
     color: red;
     text-align: center;
     border: 2px solid rgba(255, 0, 0, 0.467);
     border-radius: 20px;
-    padding: 50px; 
     margin: 0 auto;
+    padding: 50px;
     
 }
 @media (max-width: 768px){
+    .productlist{
+        overflow: scroll;
+        margin: 0 auto;
+        min-height: 100vh;
+       border: 2px solid green;
+       padding: 0 0 0 50px ;
+        }
 
 }
 @media (min-width: 768px)  {

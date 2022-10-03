@@ -1,18 +1,21 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
+import { greetingWasShowedAction } from "../../redux/actions";
 import classes from './Greeting.module.css'
 
-function Greeting(props:{closePortal():void}) {
+function Greeting() {
     const [timer, setTimer] = useState(10)
-    const closePortal = props.closePortal
+
+    const dispatch = useDispatch()
 
     useEffect(() => {
         let interval = setInterval(() => setTimer(prev => prev - 1), 1000)
         setTimeout(() => {
-            closePortal()
+            dispatch(greetingWasShowedAction)
             clearInterval(interval)
         }, 10000)
-    }, [])
+    }, [dispatch])
 
     const variants = {
         hiden: { scale: 0.9, opacity: 0.9 },
@@ -56,7 +59,7 @@ function Greeting(props:{closePortal():void}) {
                 <motion.p className={classes.p} variants={timerAnim}>Данные с сервиса fakestoreapi.com</motion.p>
             </motion.div>
             <motion.button
-                onClick={()=>closePortal()}
+                onClick={()=>dispatch(greetingWasShowedAction)}
                 variants={button} className={classes.button}>Ok</motion.button>
         </motion.div>
     );

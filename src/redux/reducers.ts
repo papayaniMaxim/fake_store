@@ -1,5 +1,5 @@
 import { State } from "../interface/interfaces";
-import { ADD_FETCH_PRODUCTS, ADD_TO_CARD, CARD_PRODUCT_ITEM_COUNT_WAS_CHANGED, CATEGORY_WAS_CHANGE, CLEAN_CARD, DELETE_FROM_CARD, END_FETCHING, FULLFILLED_SENDING_ORDER, GREETING_WAS_SHOWED, PENDING_SENDING_ORDER, PRODUCT_FETCHING_ERROR, REJECTED_SENDING_ORDER, SEARCH_WAS_CHANGE, SORT_WAS_CHANGE, START_FETCHING, START_SENDING_ORDER, } from "./actions";
+import { ADD_FETCH_PRODUCTS, ADD_TO_CARD, ADD_USER_INFO, CARD_PRODUCT_ITEM_COUNT_WAS_CHANGED, CATEGORY_WAS_CHANGE, CLEAN_CARD, DELETE_FROM_CARD, END_FETCHING, FULLFILLED_SENDING_ORDER, GREETING_WAS_SHOWED, PENDING_SENDING_ORDER, PRODUCT_FETCHING_ERROR, REJECTED_SENDING_ORDER, SEARCH_WAS_CHANGE, SING_OUT, SORT_WAS_CHANGE, START_FETCHING, START_SENDING_ORDER, } from "./actions";
 
 const initialState = {
     products: [],
@@ -69,12 +69,21 @@ export const reducer = (state:State = initialState , action: any) => {
         
         case GREETING_WAS_SHOWED:
             return { ...state, greetingWasShowed: true }
+        
         case CARD_PRODUCT_ITEM_COUNT_WAS_CHANGED:
             let newCard = state.card.map(item => {
                 if (item.product.id === action.order.product.id) return { product: action.order.product, count: action.order.count }
                 return item
             })
-            return { ...state, card:newCard}
+            return { ...state, card: newCard }
+        case ADD_USER_INFO:
+            let currentInfo = { ...state.userInfo }
+            let newInfo = {...currentInfo, ...action.userInfo}
+            
+            return { ...state, userInfo: newInfo }
+        
+        case SING_OUT:
+            return {...state, userInfo:{}}
         
         default: return state
     }

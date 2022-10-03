@@ -17,6 +17,15 @@ export interface Order {
     count: number,
 }
 
+export interface userInfo {
+    login?: boolean | undefined,
+    firstName?: string ,
+    lastName?: string ,
+    tel?: string ,
+    email?: string ,
+    uid?: string ,
+}
+
 export interface State {
     fetching: boolean;
     products: Product[];
@@ -28,5 +37,5 @@ export interface State {
     sendingOrderStatus: string,
     greetingWasShowed: boolean,
     orders: Order[],
+    userInfo?: userInfo,
 }
-

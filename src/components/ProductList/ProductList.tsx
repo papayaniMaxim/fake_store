@@ -1,6 +1,6 @@
 import classes from './ProductList.module.css'
 import { useSelector } from 'react-redux'
-import { useEffect, useMemo } from 'react'
+import { useMemo } from 'react'
 import { motion } from 'framer-motion'
 import useFilter from '../../hooks/useFilter'
 import TESTProductCard from './ProductItem/TESTProductCard'
@@ -21,7 +21,7 @@ export default function ProductList() {
     const productList = useMemo(() => {
         return filteredProducts.map(product => <li key={product.id} ><TESTProductCard product={product} /></li>)
     }, [filteredProducts])
-    
+
     return (
         
         <>
