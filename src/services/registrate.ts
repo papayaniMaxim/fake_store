@@ -30,13 +30,13 @@ export default async function registrateFirebase(firstName: string | undefined, 
                         const user = auth.currentUser
                         if (!user || !user.displayName || !user.email) return
                         const displayNameArr = user.displayName.split('+')
-                        const phoneNumber = '+' + displayNameArr[1]
+                        const tel = '+' + displayNameArr[1]
                         const firstName = displayNameArr.join('').split(' ')[0]
                         const lastName = displayNameArr.join('').split(' ')[1]
                         const email = user.email
                         const uid = user.uid
                         const login = true
-                        return { phoneNumber, email, uid, firstName, lastName, login }
+                        return { tel, email, uid, firstName, lastName, login }
                     });
             }
         })
