@@ -1,7 +1,6 @@
-
-.passive{
+.passive {
     display: block;
-    background: none ; 
+    background: none;
     padding: 5px 40px;
     color: rgb(73, 73, 73);
     font-family: "Open Sans", sans-serif;
@@ -13,12 +12,12 @@
     word-wrap: normal;
     white-space: nowrap;
 }
-.passive:hover{
-    color:black;
+.passive:hover {
+    color: black;
     background-color: rgba(238, 238, 238, 0.5);
 }
 
-.active{
+.active {
     display: block;
     padding: 5px 40px;
     font-family: "Open Sans", sans-serif;

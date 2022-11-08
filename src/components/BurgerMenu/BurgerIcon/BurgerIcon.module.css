@@ -1,45 +1,44 @@
-.icon{
+.icon {
     box-sizing: border-box;
     cursor: pointer;
     width: 30px;
     height: 30px;
 }
-.item1{
+.item1 {
     position: relative;
     background-color: black;
     width: 30px;
-    border:2px solid black;
-    border-radius:2px;
+    border: 2px solid black;
+    border-radius: 2px;
     margin-bottom: 4px;
     transition: all 1.5s cubic-bezier(0.075, 0.82, 0.165, 1) 0s;
 }
-.item2{
+.item2 {
     position: relative;
     background-color: black;
     width: 30px;
-    border:2px solid black;
-    border-radius:2px;
+    border: 2px solid black;
+    border-radius: 2px;
     margin-bottom: 4px;
-    transition: all 1s cubic-bezier(0.215, 0.610, 0.355, 1) 0s;
+    transition: all 1s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
 }
-.item3{
+.item3 {
     position: relative;
     background-color: black;
     width: 30px;
-    border:2px solid black;
-    border-radius:2px;
+    border: 2px solid black;
+    border-radius: 2px;
     transition: all 2s cubic-bezier(0.075, 0.82, 0.165, 1) 0s;
 }
 
-.item22{
+.item22 {
     opacity: 0;
-    transform: translate( -100px,0);
+    transform: translate(-100px, 0);
 }
 
-.item33{
+.item33 {
     transform: rotate(135deg) translate(0, 11px);
 }
-.item11{
-    transform: rotate(-135deg) translate(0,-11px);
-
+.item11 {
+    transform: rotate(-135deg) translate(0, -11px);
 }

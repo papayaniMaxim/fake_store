@@ -1,6 +1,5 @@
-import { createContext } from "react"
+import { createContext } from "react";
 
-const states:any = undefined
+const states: any = undefined;
 
-    
-export const regContext = createContext(states)
+export const regContext = createContext(states);

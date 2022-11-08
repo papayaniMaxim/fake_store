@@ -1,4 +1,4 @@
-.button{
+.button {
     z-index: 98;
     height: 40px;
     width: 180px;
@@ -9,17 +9,17 @@
     justify-content: center;
     align-items: center;
     opacity: 0.8;
-    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5849 45%,#d6249e 60%,#2859eb 90%);
-    box-shadow: 0px 3px 10px rgba(0,0,0,.25);
-        
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5849 45%, #d6249e 60%, #2859eb 90%);
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25);
+
     position: fixed;
-    bottom:20px;
+    bottom: 20px;
     left: calc(50% - 90px);
     transition: all;
     transition-duration: 100ms;
 
     animation-name: callme;
-    animation-duration: 1s ;
+    animation-duration: 1s;
     animation-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715);
     animation-iteration-count: infinite;
     animation-direction: alternate;
@@ -28,50 +28,46 @@
     padding: 30px 30px;
     border-radius: 200px;
     font-family: "Open Sans", sans-serif;
-        
 }
-.button:hover{
+.button:hover {
     opacity: 1;
 }
 
 @keyframes callme {
-    0%{
-
+    0% {
     }
-    100%{
+    100% {
         scale: 1.2;
     }
-
 }
 
-.content{
+.content {
     width: fit-content;
     height: 20px;
     overflow: hidden;
     position: relative;
 }
 
-.contentItem{
-    color:white;
+.contentItem {
+    color: white;
     position: relative;
     line-height: 25px;
     animation-name: scrolling;
-    animation-duration: 4s ;
+    animation-duration: 4s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
 @keyframes scrolling {
-    0%{
-        transform: translateY(-3px); 
-    }
-    45%{
+    0% {
         transform: translateY(-3px);
     }
-    55%{
+    45% {
+        transform: translateY(-3px);
+    }
+    55% {
         transform: translateY(-28px);
     }
-    100%{
-       transform: translateY(-28px); 
+    100% {
+        transform: translateY(-28px);
     }
-
 }

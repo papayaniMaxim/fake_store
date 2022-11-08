@@ -1,11 +1,11 @@
-.card{
+.card {
     padding-top: 80px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 @media (max-width: 768px) {
-    .card{
+    .card {
         padding: 0;
         display: flex;
         flex-direction: column;

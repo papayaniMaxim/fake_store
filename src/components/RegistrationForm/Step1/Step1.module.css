@@ -1,4 +1,4 @@
-.container{
+.container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -8,7 +8,7 @@
     animation-duration: 0.5s;
     animation-iteration-count: 1;
 }
-.button{
+.button {
     cursor: pointer;
     border: 1px solid #cb11ab;
     padding: 14px 30px;
@@ -17,7 +17,7 @@
     background: #cb11ab;
     font-family: "Open Sans", sans-serif;
     font-size: 16px;
-    transition:200ms;
+    transition: 200ms;
     margin: 20px;
     animation-name: anim;
     animation-duration: 1s;
@@ -25,56 +25,50 @@
 }
 
 @keyframes anim {
-    0%{
+    0% {
         opacity: 0;
     }
-    100%{
+    100% {
         opacity: 1;
     }
 }
 
-.button:hover{
+.button:hover {
     background: #fff;
     color: #115dd8;
 }
 
-.input{
-        width: 30vw;
-        min-width: 250px;
-        background: rgba(255, 255, 255, 0.1) ;
-        padding: 10px;
-        margin: 5px;
-        color: black;
-        font-size: 14px;
-        border: 1px #96007d52 solid;
-        border-radius: 10px;
-        font-family: "Open Sans", sans-serif;;
-    
+.input {
+    width: 30vw;
+    min-width: 250px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    margin: 5px;
+    color: black;
+    font-size: 14px;
+    border: 1px #96007d52 solid;
+    border-radius: 10px;
+    font-family: "Open Sans", sans-serif;
 }
 
-.input:focus{
-    transition:all;
+.input:focus {
+    transition: all;
     transition-duration: 200ms;
     font-size: 16px;
-    box-shadow: 
-    0 0 7px rgba(157, 0, 255, 0.05),
-    0 0 10px rgba(157, 0, 255, 0.05),
-    0 0 21px rgba(132, 0, 255, 0.05),
-    0 0 42px rgba(251, 0, 255, 0.01),
-    0 0 82px rgba(251, 0, 255, 0.01);;
+    box-shadow: 0 0 7px rgba(157, 0, 255, 0.05), 0 0 10px rgba(157, 0, 255, 0.05), 0 0 21px rgba(132, 0, 255, 0.05),
+        0 0 42px rgba(251, 0, 255, 0.01), 0 0 82px rgba(251, 0, 255, 0.01);
 }
 
-
-@media screen and (max-width: 500px ) {
-    .input:focus{
-        transition:all;
+@media screen and (max-width: 500px) {
+    .input:focus {
+        transition: all;
         transition-duration: 200ms;
         font-size: 16px;
         box-shadow: none;
     }
 }
 
-.error{
+.error {
     font-size: 12px;
     color: red;
 }

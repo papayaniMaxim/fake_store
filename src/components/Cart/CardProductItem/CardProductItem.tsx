@@ -25,7 +25,7 @@ export default function CardProductItem(props:{order:Order}) {
                     <img alt='product img' className={classes.image} src={product.image}/>
                 </div>
                 {imgModalOpen && <MyModal setModalIsOpen={() => setImgModalOpen(() => false)}>
-                <div className={classes.imagecontainerModal}>
+                    <div onClick={() => setImgModalOpen(() => false)} className={classes.imagecontainerModal}>
                     <img alt='product img' className={classes.image} src={product.image}/>
                 </div> 
                 </MyModal>}
@@ -38,7 +38,7 @@ export default function CardProductItem(props:{order:Order}) {
                 <div
                     onClick={() => {
                         setRemoveItem(() => true)
-                        setTimeout(() => dispatch(deleteFromCard(product.id)), 600)
+                        setTimeout(() => dispatch(deleteFromCard(product.id.toString())), 120)
                     }}
                     className={classes.deletebutton}><DeleteButton></DeleteButton></div>
                 <Count order={props.order} />

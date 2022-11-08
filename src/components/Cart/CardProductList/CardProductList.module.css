@@ -1,14 +1,11 @@
 .cardproductlist{
     border-radius: 20px;
-    width: 65%;
     margin: 10px 20px;
     min-height: 200px;
     border: 1px solid rgba(0, 0, 0, 0.1);
-    display: flex;
-    justify-content: center;
-    align-items: center;
     padding: 5px;
     transition-duration: 500ms;
+    width: 65%;
 }
 .top{
     display: flex;

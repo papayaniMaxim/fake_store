@@ -57,14 +57,13 @@ function TESTProductCard(props: {product: Product}) {
                 
                 {imgModalOpen && <MyModal
                     setModalIsOpen={() => setImgModalOpen(() => false)}>
-                    <div className={classes.imagecontainerModal} onClick={()=> setImgModalOpen(()=>true)}>
+                    <div className={classes.imagecontainerModal} onClick={()=> setImgModalOpen(()=>false)}>
                         <img className={classes.imageModal} src={product.image}></img>
                     </div>
                 </MyModal>}
             </div>
             <div className={classes.bottom}>
                 <motion.button
-                    whileHover={inCart ? {scale: 1} : { scale: 1.15 }}
                     whileTap={inCart ? {scale: 1} : { scale: 0.9 }}
                     transition={{ type: "spring", stiffness: 400, damping: 17 }}
                     onClick={() => {

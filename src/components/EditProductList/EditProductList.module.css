@@ -1,0 +1,16 @@
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+.button {
+    cursor: pointer;
+    border: 1px solid #cb11ab;
+    padding: 14px 30px;
+    border-radius: 200px;
+    color: #fff;
+    background: #cb11ab;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    margin: 20px auto;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25);
+}

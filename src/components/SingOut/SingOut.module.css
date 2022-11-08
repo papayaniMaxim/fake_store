@@ -1,4 +1,4 @@
-.container{
+.container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -10,60 +10,58 @@
     background: #fff;
     padding: 30px;
     border-radius: 25px;
-
 }
 
 @keyframes anim {
-    0%{
+    0% {
         opacity: 0;
     }
-    100%{
+    100% {
         opacity: 1;
     }
 }
 
-.infoTable{
+.infoTable {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border:1px solid rgba(0, 0, 0, 0.329);
+    border: 1px solid rgba(0, 0, 0, 0.329);
     border-radius: 25px;
     width: fit-content;
     padding: 20px;
 }
-.tableTitle{
+.tableTitle {
     color: #000000;
     font-size: 20px;
-    transition:200ms;
+    transition: 200ms;
     font-family: "Open Sans", sans-serif;
     padding-bottom: 20px;
 }
 
-.tableRow{
+.tableRow {
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     border-top: 1px solid rgba(0, 0, 0, 0.329);
-    
 }
-.rowTitle{
+.rowTitle {
     /* padding: 14px 30px; */
     color: #00000071;
     font-size: 16px;
-    transition:200ms;
+    transition: 200ms;
     font-family: "Open Sans", sans-serif;
     padding: 20px;
 }
-.rowValue{
+.rowValue {
     color: #3b0031;
     font-size: 16px;
-    transition:200ms;
+    transition: 200ms;
     font-family: "Open Sans", sans-serif;
     padding: 20px;
 }
-.button{
+.button {
     cursor: pointer;
     border: 1px solid #cb11ab;
     padding: 14px 30px;
@@ -72,11 +70,11 @@
     background: #cb11ab;
     font-family: "Open Sans", sans-serif;
     font-size: 16px;
-    transition:200ms;
+    transition: 200ms;
     margin: 20px;
 }
 
-.button:hover{
+.button:hover {
     background: #fff;
     color: #115dd8;
 }

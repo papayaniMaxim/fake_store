@@ -15,14 +15,19 @@ export default function CardOrder() {
                 <h3>Total price:</h3>
                 <h3>${(totalPrice).toFixed(2)}</h3>
             </div>
-            <div className={classes.productscout}>
+            {!!productsCount &&
+                <>
+                <div className={classes.productscout}>
                 <h5>Products count:</h5>
                 <h5>{productsCount}</h5>
             </div>
             <button
-                onClick={()=> setOpen(prev=>!prev)}
+                onClick={() => {
+                    setOpen(prev => !prev)
+                }}
                 className={classes.button}>buy
             </button>
+                </>}
 
             {open ? <BuyModal open={open} setOpen = {()=>setOpen(prev=>false)} /> : null}
             

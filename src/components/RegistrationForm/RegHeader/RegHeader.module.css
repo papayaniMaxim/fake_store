@@ -1,16 +1,16 @@
-.title{
+.title {
     padding: 14px 30px;
     color: #cb11ab;
     font-family: "Open Sans", sans-serif;
     font-size: 30px;
-    transition:200ms;
+    transition: 200ms;
 }
 
-.headerContainer{
+.headerContainer {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.p{
+.p {
     font-size: 24px;
 }

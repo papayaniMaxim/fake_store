@@ -7,6 +7,7 @@
     flex-direction: row;
     justify-content: space-between;
     border-top: 1px solid rgba(0, 0, 0, 0.169);
+
 }
 .imagecontainer{
     min-width: 80px;
@@ -85,7 +86,7 @@
 
 .deleteItem{
     transition: cubic-bezier(0.455, 0.03, 0.515, 0.955);
-    transition-duration: 500ms;
+    transition-duration: 100ms;
     opacity: 0;
     transform: scale(0,0);
 }

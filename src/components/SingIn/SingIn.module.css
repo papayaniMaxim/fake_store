@@ -1,16 +1,16 @@
-.container{
+.container {
     background-color: white;
-    border-radius:25px ;
+    border-radius: 25px;
     padding: 20px;
 }
-.title{
+.title {
     padding-bottom: 20px;
     color: #cb11ab;
     font-family: "Open Sans", sans-serif;
     font-size: 30px;
-    transition:200ms;
+    transition: 200ms;
 }
-.p{
+.p {
     font-family: "Open Sans", sans-serif;
     font-size: 18px;
     opacity: 0.7;

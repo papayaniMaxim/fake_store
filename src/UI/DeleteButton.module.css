@@ -1,4 +1,4 @@
-.container{
+.container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,38 +11,37 @@
     padding: 6px;
     cursor: pointer;
 }
-.container:hover{
+.container:hover {
     opacity: 0.7;
 }
 
-.children{
+.children {
     padding-right: 5px;
 }
 
-.cross{
+.cross {
     width: 20px;
     height: 20px;
     display: flex;
     justify-content: center;
-    align-items: center ;
+    align-items: center;
     position: relative;
     cursor: pointer;
 }
-.crossLine1{
+.crossLine1 {
     background: black;
     position: absolute;
     width: 20px;
     height: 3px;
     border-radius: 5px;
-    transform: rotate(45deg) ;
-
+    transform: rotate(45deg);
 }
 
-.crossLine2{
+.crossLine2 {
     background: black;
     position: absolute;
     width: 20px;
     height: 3px;
     border-radius: 5px;
     transform: rotate(-45deg);
-  }
+}

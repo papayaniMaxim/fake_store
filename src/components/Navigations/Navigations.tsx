@@ -7,6 +7,7 @@ import Search from "./Seach/Search";
 import CallMeButton from "./CallMeButton/CallMeButton";
 import { useEffect } from "react";
 import UserIcon from "./UserIcon/UserIcon";
+import AdminPageIcon from "./AdminPageIcon/AdminPageIcon";
 
 function Navigations() {
 
@@ -25,6 +26,7 @@ function Navigations() {
                 <div className={classes.rightModule}>
                     <UserIcon />
                     <Link to='/card' className={classes.card}> <CardIcon /></Link>
+                    <Link to='/admin'><AdminPageIcon/></Link>
                 </div>
             </motion.nav>
             <CallMeButton />

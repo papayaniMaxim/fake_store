@@ -1,4 +1,4 @@
-.burger{
+.burger {
     position: fixed;
     display: inline-block;
     width: 30px;
@@ -6,7 +6,7 @@
     margin: 6% 3%;
     z-index: 40;
 }
-.dropMenu{
+.dropMenu {
     z-index: 3;
     position: fixed;
     left: 0;
@@ -18,11 +18,11 @@
     animation-duration: 0.3s;
     transition: cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
-@keyframes burger{
-    0%{
+@keyframes burger {
+    0% {
         right: 100%;
     }
-    100%{
+    100% {
         right: 0;
     }
 }
